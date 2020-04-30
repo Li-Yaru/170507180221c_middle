@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.edu.sdwu.android02.classroom.sn170507180221" >
+    package="cn.edu.sdwu.android02.classroom.sn170507180221">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,7 +12,7 @@
         android:label="李亚茹"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".Ch10Activity1" />
         <activity android:name=".Ch10Activity2" />
@@ -20,7 +20,7 @@
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.Inspur.broadcast" />
             </intent-filter>
@@ -44,9 +44,19 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Ch12Activity2" >
+        <activity android:name=".Ch12Activity2" />
+        <activity android:name=".Ch13Activity1">
+
         </activity>
-        <activity android:name=".Ch13Activity1" >
+        <activity android:name=".Ch14Activity1" />
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.inspur.android02"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Ch15Activity1">
             <intent-filter>
                 <action android:name="com.inspur.action2" />
 
@@ -56,8 +66,6 @@
                     android:host="inspur.com"
                     android:scheme="abc" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Ch14Activity1" >
         </activity>
     </application>
 
